@@ -16,4 +16,6 @@ def app():
     password = st.sidebar.text_input('Password', type='password')
     agree = st.sidebar.checkbox('Saya telah membaca dan menyetujui User Agreement di samping.')
     if agree:
-        
+        return st.sidebar.button('Sign In')
+    else:
+        return false
