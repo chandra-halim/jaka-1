@@ -1,4 +1,4 @@
-# main.py
+# app.py
 import home
 import schedule
 import login
@@ -21,7 +21,13 @@ hide_menu_style = """
 
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-st.sidebar.title('Navigation')
-selected = st.sidebar.selectbox('Go To', PAGES.keys())
+st.sidebar.title('JAKA')
+st.sidebar.info('Jadwal Aman Kuliah Aman')
+selected = st.sidebar.selectbox('GO TO',PAGES.keys())
 page = PAGES[selected]
-page.app()
+
+if page != login:
+    page.app()
+
+elif page.app() == True:
+    st.sidebar.balloons()
