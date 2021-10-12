@@ -10,7 +10,20 @@ PAGES = {
     "Plan"  : plan,
 }
 
-st.set_page_config(page_title='JAKA', page_icon=":books:")
+st.set_page_config(
+    page_title='JAKA',
+    page_icon=':diamond:',
+    layout='wide',
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help':
+            'https://google.com',
+        'Report a bug':
+            'https://instagram.com',
+        'About':
+            "# This is a header. This is an *extremely* cool app!"
+    }
+)
 
 hide_menu_style = """
             <style>
