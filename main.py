@@ -1,13 +1,13 @@
 # app.py
 import home
-import schedule
+import plan
 import login
 import streamlit as st
 
 PAGES = {
-    "Home": home,
-    "Schedule": schedule,
-    "Login SSO": login
+    "Home"  : home,
+    "Login" : login,
+    "Plan"  : plan,
 }
 
 st.set_page_config(page_title='JAKA', page_icon=":books:")
@@ -23,11 +23,13 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.sidebar.title('JAKA')
 st.sidebar.info('Jadwal Aman Kuliah Aman')
-selected = st.sidebar.selectbox('GO TO',PAGES.keys())
+selected = st.sidebar.selectbox('GO TO', PAGES.keys())
 page = PAGES[selected]
 
 if page != login:
     page.app()
 
-elif page.app() == True:
-    st.sidebar.balloons()
+else:
+    user_login = page.app()
+    if user_login['agree'] & user_login['login']:
+        st.sidebar.balloons()
