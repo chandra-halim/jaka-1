@@ -12,4 +12,8 @@ def app():
     st.subheader('User Agreement')
     st.markdown(user_agreement, unsafe_allow_html=True)
     st.info('Harap dibaca secara saksama User Agreement di atas sebelum menyetujuinya')
-    return st.checkbox('Saya setuju')
+    username = st.sidebar.text_input('Username')
+    password = st.sidebar.text_input('Password', type='password')
+    agree = st.sidebar.checkbox('Saya telah membaca dan menyetujui User Agreement di samping.')
+    if agree:
+        
