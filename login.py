@@ -18,4 +18,4 @@ def app():
     if agree:
         return st.sidebar.button('Sign In')
     else:
-        return false
+        return False
