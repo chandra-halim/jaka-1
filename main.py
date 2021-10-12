@@ -11,5 +11,6 @@ PAGES = {
 }
 
 st.sidebar.title('Navigation')
-route = st.sidebar.selectbox('Go To', PAGES.keys())
-route.app()
+selected = st.sidebar.selectbox('Go To', PAGES.keys())
+page = PAGES[selected]
+page.app()
