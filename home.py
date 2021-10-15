@@ -2,9 +2,9 @@
 import streamlit as st
 def app():
     p1 = '''
-        <p style="color:blue;font-size:46px;">
+        <h1>
             I'm a big, blue, <strong>strong</strong> paragraph
-        </p>
+        </h1>
         '''
     st.title('APP1')
     st.color_picker('Pick A Cplor', '#00f900')
