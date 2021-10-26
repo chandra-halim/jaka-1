@@ -35,7 +35,7 @@ def app():
             <button type="button" onclick="alert('Hello world!')">
                 Get Started
             </button>
-        '''
+        ''')
         started = st.button("Get Started", help='klik untuk memulai!')
         if started:
             st.balloons()
