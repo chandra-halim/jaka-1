@@ -31,7 +31,7 @@ def app():
         for i in range(2):
             body.write(' ')
             
-        st.markdown('''
+        style_button = """
             <style>
             .button {
               background-color: #f72585;
@@ -44,16 +44,16 @@ def app():
               font-size: 16px;
               margin: 4px 2px;
               cursor: pointer;
-              width: 50%;
+              width: 40%;
             }
-
             .button:hover {
               box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
             }
             </style>
             <button class="button" onclick="alert('Hello world!')"> Get Started </button>
-        ''', unsafe_allow_html=True)
-        started = st.button("Get Started", help='klik untuk memulai!')
+        """
+        st.markdown(style_button, unsafe_allow_html=True)
+        
         if started:
             st.balloons()
             st.success('Cieee, udah siap nih buat mulai')
