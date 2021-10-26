@@ -30,6 +30,12 @@ def app():
         body.write(about_text)
         for i in range(2):
             body.write(' ')
+            
+        st.markdown('''
+            <button type="button" onclick="alert('Hello world!')">
+                Get Started
+            </button>
+        '''
         started = st.button("Get Started", help='klik untuk memulai!')
         if started:
             st.balloons()
