@@ -1,48 +1,58 @@
-# app.py
-import home
-import plan
-import login
 import streamlit as st
-
-PAGES = {
-    "Home"  : home,
-    "Login" : login,
-    "Plan"  : plan,
-}
+import time
+from pages import welcome, home
 
 st.set_page_config(
-    page_title='JAKA',
-    page_icon=':diamond:',
-    layout='wide',
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help':
-            'https://google.com',
-        'Report a bug':
-            'https://instagram.com',
-        'About':
-            "# This is a header. This is an *extremely* cool app!"
-    }
+    page_title="JAKA",
+    page_icon="random",
+    layout="wide"
 )
 
-# hide_menu_style = """
-#             <style>
-#             #MainMenu {visibility: hidden;}
-#             footer {visibility: hidden;}
-#             </style>
-#             """
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        </style>
+    """
 
-# st.markdown(hide_menu_style, unsafe_allow_html=True)
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-st.sidebar.title('JAKA')
-st.sidebar.info('Jadwal Aman Kuliah Aman')
-selected = st.sidebar.selectbox('GO TO', PAGES.keys())
-page = PAGES[selected]
+page_list = [
+    'Home'
+    ,'Login'
+    # ,'Create Plan'
+    # ,'View Plan'    
+]
 
-if page != login:
-    page.app()
+h1, h2 = st.columns((5, 1))
 
-else:
-    user_login = page.app()
-    if user_login['agree'] & user_login['login']:
-        st.sidebar.balloons()
+with h1: # Kolom kiri untuk logo
+    st.write(" ")
+    st.write(" ")
+    st.image(
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gojek_logo_2019.svg/2560px-Gojek_logo_2019.svg.png',
+        width=150
+    )
+
+with h2: # Dropdown menu
+    st.selectbox(
+        label='Go To',
+        options=page_list,
+    )
+
+home.app()
+
+# Simulasi Loading sebelum ke Home Page
+#     if "loading" not in st.session_state:
+#         st.session_state["loading"] = False
+
+#     if st.session_state["loading"] == False:
+#         welcome.new()
+#         st.session_state["loading"] = True
+#         start = st.button("Get Started")
+#     else:
+#         start = True
+#         welcome.old()
+
+#     if start:
+#         home.app()
