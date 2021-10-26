@@ -31,29 +31,25 @@ def app():
         for i in range(2):
             body.write(' ')
             
-        style_button = """
+        st.markdown("""
             <style>
-            .button {
-              background-color: #f72585;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-              width: 40%;
+            div.stButton > button:first-child {
+                background-color: #f72585;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                width: 40%;
             }
-            .button:hover {
-              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-            }
-            </style>
-            <button class="button" onclick="alert('Hello world!')"> Get Started </button>
-        """
-        st.markdown(style_button, unsafe_allow_html=True)
-        started = st.button("Get Started", help="klik untuk mulai")
+            </style>""", unsafe_allow_html=True)
+        
+        started = st.button("Get Started")
+        
         if started:
             st.balloons()
             st.success('Cieee, udah siap nih buat mulai')
