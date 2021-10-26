@@ -25,14 +25,14 @@ st.set_page_config(
     }
 )
 
-hide_menu_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
+# hide_menu_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             </style>
+#             """
 
-st.markdown(hide_menu_style, unsafe_allow_html=True)
+# st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.sidebar.title('JAKA')
 st.sidebar.info('Jadwal Aman Kuliah Aman')
