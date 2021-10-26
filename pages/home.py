@@ -32,10 +32,7 @@ def app():
             body.write(' ')
             
         st.markdown('''
-            <button type="button" onclick="alert('Hello world!')">
-                Get Started
-            </button>
-        ''')
+            <button type="button" onclick="alert('Hello world!')"> Get Started </button>''', unsafe_allow_html=True)
         started = st.button("Get Started", help='klik untuk memulai!')
         if started:
             st.balloons()
