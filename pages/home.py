@@ -32,7 +32,27 @@ def app():
             body.write(' ')
             
         st.markdown('''
-            <button type="button" onclick="alert('Hello world!')"> Get Started </button>''', unsafe_allow_html=True)
+            <style>
+            .button {
+              background-color: #f72585;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              width: 50%;
+            }
+
+            .button:hover {
+              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            </style>
+            <button type="button" onclick="alert('Hello world!')"> Get Started </button>
+        ''', unsafe_allow_html=True)
         started = st.button("Get Started", help='klik untuk memulai!')
         if started:
             st.balloons()
