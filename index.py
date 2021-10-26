@@ -13,7 +13,7 @@ hide_menu_style = """
         footer {visibility: hidden;}
         
         .button {
-          background-color: #f72585; /* Green */
+          background-color: #f72585;
           border: none;
           color: white;
           padding: 15px 32px;
@@ -24,6 +24,11 @@ hide_menu_style = """
           margin: 4px 2px;
           cursor: pointer;
           width: 50%;
+        }
+        
+        .button:hover {
+          background-color: #ffffff;
+          color: white;
         }
         </style>
     """
