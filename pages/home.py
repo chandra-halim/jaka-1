@@ -53,7 +53,7 @@ def app():
             <button class="button" onclick="alert('Hello world!')"> Get Started </button>
         """
         st.markdown(style_button, unsafe_allow_html=True)
-        
+        started = st.button("Get Started", help="klik untuk mulai")
         if started:
             st.balloons()
             st.success('Cieee, udah siap nih buat mulai')
