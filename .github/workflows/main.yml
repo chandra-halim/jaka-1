@@ -38,6 +38,3 @@ jobs:
     - name: Start Streamlit app
       run: |
         streamlit run index.py &
-    - name: Test with pytest
-      run: |
-        pytest
