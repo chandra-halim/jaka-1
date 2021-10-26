@@ -37,4 +37,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Start Streamlit app
       run: |
-        streamlit run main.py &
+        streamlit run main.py --theme.base "light" --theme.primaryColor "#f72585" --theme.backgroundColor "#f8f8f8" --theme.textColor "#3a0ca3" &
