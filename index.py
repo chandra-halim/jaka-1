@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import home, login, error
+from pages import home, login, error, schedule
 
 st.set_page_config(
     page_title="JAKA",
@@ -8,18 +8,17 @@ st.set_page_config(
 )
 
 hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        </style>
-    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+"""
 
 st.markdown(hide_menu_style, unsafe_allow_html=True)
-
 page_list = [
     'Home'
     ,'Login'
-    # ,'Create Plan'
+    ,'Schedule'
     # ,'View Plan'    
 ]
 
@@ -41,20 +40,7 @@ with h2: # Dropdown menu
 
 if menu == 'Home':
     home.app()
+elif menu == 'Schedule':
+    schedule.app()
 else:
     error.app(307)
-
-# Simulasi Loading sebelum ke Home Page
-#     if "loading" not in st.session_state:
-#         st.session_state["loading"] = False
-
-#     if st.session_state["loading"] == False:
-#         welcome.new()
-#         st.session_state["loading"] = True
-#         start = st.button("Get Started")
-#     else:
-#         start = True
-#         welcome.old()
-
-#     if start:
-#         home.app()
