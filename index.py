@@ -26,9 +26,10 @@ h1, h2 = st.columns((5, 1))
 
 with h1: # Kolom kiri untuk logo
     st.write(" ")
+    st.write(" ")
     st.image(
         'https://i.ibb.co/yP2wjhW/jaka-02.png',
-        width=100
+        width=80
     )
 
 with h2: # Dropdown menu
