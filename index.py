@@ -28,7 +28,7 @@ with h1: # Kolom kiri untuk logo
     st.write(" ")
     st.write(" ")
     st.image(
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Gojek_logo_2019.svg/2560px-Gojek_logo_2019.svg.png',
+        'https://i.ibb.co/yP2wjhW/jaka-02.png',
         width=150
     )
 
