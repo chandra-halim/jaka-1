@@ -15,7 +15,7 @@ def load_lottieurl(url: str):
     return r.json()
 
 def app():
-    c1, c2 = st.columns((3,1))
+    c1, c2 = st.columns(2)
     
     with c2:
         lottie_file = load_lottiefile("assets/schedule.json")  # replace link to local lottie file
