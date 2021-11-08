@@ -30,7 +30,7 @@ st.markdown("""
     <a class="nav-link active" href="#">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="#">Login</a>
+    <a class="nav-link" href="#">Login</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Schedule</a>
