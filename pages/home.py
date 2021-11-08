@@ -71,7 +71,7 @@ def app():
         else:
             body.title("JAKA", 'get-started')
             about_text = """
-                Jaka is built to make Universitas Indonesia students' course scheduling easier, faster, seamless, and more intuitive than ever.
+                Jaka is built to make Universitas Indonesia student's course scheduling easier, faster, seamless, and more intuitive than ever.
             """
             body.header(about_text)
             for i in range(2):
