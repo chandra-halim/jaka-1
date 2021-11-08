@@ -42,7 +42,7 @@ def app():
         for i in range(2):
             body.write(' ')
         
-        st.warning(st.session_state['start'])
+        #st.warning(st.session_state['start'])
         
         st.markdown("""
         <style>
